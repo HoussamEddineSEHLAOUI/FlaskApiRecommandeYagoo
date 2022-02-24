@@ -4,7 +4,7 @@ app = Flask(__name__)
 urlApi = "/api-yagoo/"
 
 
-@app.route(urlApi+"Poste", methods=['GET', 'POST'])
+@app.route(urlApi+"Poste", methods=['PUT'])
 def set_onPoste():
     content = request.json
     return {
@@ -26,7 +26,7 @@ def setRating_onPoste():
     }
 
 
-@app.route(urlApi+"cilck-poste_marker-map", methods=['POST'])
+@app.route(urlApi+"cilck-poste_marker-map", methods=['PUT'])
 def set_onPoste_ClickMarker_onMap():
     content = request.json
     return {
@@ -36,7 +36,7 @@ def set_onPoste_ClickMarker_onMap():
     }
 
 
-@app.route(urlApi+"click-webSite-poste", methods=['POST'])
+@app.route(urlApi+"click-webSite-poste", methods=['PUT'])
 def set_onPoste_ifVisteWebSite():
     content = request.json
     return {
